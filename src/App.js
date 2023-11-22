@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Random Circles</h1>
+      <h1>Changing Circles</h1>
       <Circles height={height} width={width} />
     </div>
   );

@@ -42,6 +42,7 @@ function Circles ({width, height}) {
             </svg>
             <div>
                 <button onClick={handleClick}>Refresh Data</button>
+                <a href="https://github.com/ctodmia/react_rust" target="_blank" rel="noreferrer"><button>View Github</button></a>
             </div>
         </div>
     )
