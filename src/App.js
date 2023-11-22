@@ -2,7 +2,7 @@ import './App.css';
 import Circles from './Circles'
 
 const width = 960
-const height = 500
+const height = 300
 function App() {
 
   return (
