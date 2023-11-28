@@ -52,7 +52,7 @@ function Circles({ width, height }) {
             Refresh
           </Typography>
         </Button>
-        <Button variant="outlined" onClick={handleClick}>
+        <Button variant="outlined">
           <GitHubIcon />
           <Typography variant="h5" color={colors.grey[100]}>
             <Link

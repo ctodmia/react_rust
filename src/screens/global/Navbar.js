@@ -1,6 +1,8 @@
 import { Box, IconButton, useTheme } from '@mui/material';
 import { useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
+import { Button, Typography } from "@mui/material";
+import Link from "@mui/material/Link";
 import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -36,9 +38,21 @@ const Navbar = () => {
               <LightModeOutlinedIcon />
             )}
           </IconButton>
+          <Button variant="outlined">
           <IconButton>
             <PersonOutlinedIcon />
           </IconButton>
+          <Typography variant="h5" color={colors.grey[100]}>
+            <Link
+              href="http://carinetodmia.com/"
+              target="_blank"
+              rel="noreferrer"
+              color={colors.greenAccent[100]}
+            >
+              Profile
+            </Link>
+          </Typography>
+        </Button>
         </Box>
       </Box>
     );
