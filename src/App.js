@@ -1,12 +1,10 @@
 
 import { useState } from "react";
-import Circles from './Circles'
+import Circles from './components/Circles'
 import { ColorModeContext, useMode } from './theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import Navbar  from './screens/global/Navbar';
 import { Routes, Route } from "react-router-dom";
-// import Dashboard from '.screens/dashboard';
-// import Form from './screens/form'
 import Sidebar  from './screens/global/Sidebar';
 
 const width = 960;
