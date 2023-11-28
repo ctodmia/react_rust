@@ -42,7 +42,7 @@ const Dashboard = () => {
           backgroundColor={colors.primary[400]}
         >
           <Box
-            mt="25px"
+            mt="15px"
             p="0 30px"
             display="flex "
             justifyContent="space-between"
@@ -66,7 +66,7 @@ const Dashboard = () => {
               </IconButton>
             </Box>
           </Box>
-          <Box height="500px" >
+          <Box height={height} >
             <Circles height={height} width={width} />
           </Box>
         </Box>
