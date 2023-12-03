@@ -2,17 +2,16 @@
 import { useState } from "react";
 import Dashboard from "./screens/dashboard";
 import { ColorModeContext, useMode } from './theme';
-import { CssBaseline, ThemeProvider } from '@mui/material';
+import { CssBaseline, Theme, ThemeProvider, styled } from '@mui/material';
 import Navbar  from './screens/global/Navbar';
 import { Routes, Route } from "react-router-dom";
-import Sidebar  from './screens/global/Sidebar';
+import Sidebar from "./screens/global/Sidebar";
 
 
 function App() {
-
-  const [theme, colorMode] = useMode();
+  const [theme, colorMode] = useMode() as { toggleColorMode: () => void }[];
   const [isSidebar, setIsSidebar] = useState(true);
-
+  
   return (
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>

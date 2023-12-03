@@ -5,5 +5,13 @@
     "noImplicitAny": true,
     "noImplicitThis": true,
     "strictNullChecks": true,
-  }
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./build/",
+    // "module": "es6",
+    // "target": "es5",
+    // "module": "es6",
+    "sourceMap": true,
+    // "outDir": "./build/",
+    "allowJs": false,
+  },
 }

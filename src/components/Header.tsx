@@ -1,7 +1,9 @@
 import { Typography, Box, useTheme } from "@mui/material";
 import { tokens } from "../theme";
 
-const Header = ({ title, subtitle }) => {
+const Header = (props: { title: string, subtitle: string }) => {
+
+  const { title, subtitle} = props; 
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (

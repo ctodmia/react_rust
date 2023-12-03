@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 import { ProSidebar, Menu, MenuItem } from "react-pro-sidebar";
 import { Box, IconButton, Typography, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
@@ -7,7 +7,9 @@ import { tokens } from "../../theme";
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 
-const Item = ({ title, to, icon, selected, setSelected }) => {
+const Item = (props: { title:string, to: string, icon: ReactElement, selected: string, setSelected: React.Dispatch<React.SetStateAction<string>> }) => {
+
+  const {title, to, selected, icon, setSelected } = props
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
@@ -25,7 +27,7 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
   );
 };
 
-const Sidebar = () => {
+const Sidebar = (props: {isSidebar: boolean}) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);

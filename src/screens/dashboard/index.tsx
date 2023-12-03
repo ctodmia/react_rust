@@ -1,4 +1,4 @@
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, IconButton, Typography, styled, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import Circles from "../../components/Circles";
@@ -8,10 +8,16 @@ import Header from "../../components/Header";
 const width = 960;
 const height = 450;
 
+
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
+  
+  const CustomBox = styled(Box)({
+    gridColumn: "span 8"
+    // gridRow: "span 2"
+    // backgroundColor: {colors.primary[400]}
+  }) as typeof Box;
   return (
     <Box m="20px">
       {/* HEADER */}
@@ -28,10 +34,8 @@ const Dashboard = () => {
       >
 
         {/* ROW 2 */}
-        <Box
-          gridColumn="span 8"
-          gridRow="span 2"
-          backgroundColor={colors.primary[400]}
+        <CustomBox
+     
         >
           <Box
             mt="15px"
@@ -61,7 +65,7 @@ const Dashboard = () => {
           <Box height={height} >
             <Circles height={height} width={width} />
           </Box>
-        </Box>
+        </CustomBox>
       </Box>
     </Box>
   );

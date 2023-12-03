@@ -1,5 +1,5 @@
 import { Box, IconButton, useTheme } from '@mui/material';
-import { useContext } from "react";
+import { Dispatch, SetStateAction, useContext } from "react";
 import { ColorModeContext, tokens } from "../../theme";
 import { Button, Typography } from "@mui/material";
 import Link from "@mui/material/Link";
@@ -8,26 +8,29 @@ import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
+import styled from '@emotion/styled';
 
 
 
-const Navbar = () => {
+const Navbar = (props: { setIsSidebar: Dispatch<SetStateAction<boolean>>; }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const colorMode = useContext(ColorModeContext);
-  
+    const CustomBox = styled(Box)({
+      display: "flex"
+      // gridRow: "span 2"
+      // backgroundColor: {colors.primary[400]}
+    }) as typeof Box;
+    
     return (
       <Box display="flex" justifyContent="space-between" p={2}>
-        <Box
-          display="flex"
-          backgroundColor={colors.primary[400]}
-          borderRadius="3px"
+        <CustomBox
         >
           <InputBase sx={{ ml: 2, flex: 1 }} placeholder="Search" />
           <IconButton type="button" sx={{ p: 1 }}>
             <SearchIcon />
           </IconButton>
-        </Box>
+        </CustomBox>
   
      
         <Box display="flex">
