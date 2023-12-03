@@ -1,6 +1,5 @@
 
 import { useState } from "react";
-import Circles from './components/Circles'
 import Dashboard from "./screens/dashboard";
 import { ColorModeContext, useMode } from './theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';
@@ -8,8 +7,6 @@ import Navbar  from './screens/global/Navbar';
 import { Routes, Route } from "react-router-dom";
 import Sidebar  from './screens/global/Sidebar';
 
-const width = 960;
-const height = 300;
 
 function App() {
 
