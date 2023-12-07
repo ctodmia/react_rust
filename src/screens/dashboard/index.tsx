@@ -17,7 +17,7 @@ const Dashboard = () => {
     gridColumn: "span 8"
     // gridRow: "span 2"
     // backgroundColor: {colors.primary[400]}
-  }) as typeof Box;
+  },{gridRow: "span 2"}, { backgroundColor: colors.primary[400]}) as typeof Box;
   return (
     <Box m="20px">
       {/* HEADER */}
@@ -63,7 +63,7 @@ const Dashboard = () => {
             </Box>
           </Box>
           <Box height={height} >
-            <Circles height={height} width={width} />
+            <Circles key={1} height={height} width={width} />
           </Box>
         </CustomBox>
       </Box>
